@@ -1,6 +1,6 @@
 import {
   JupyterFrontEnd,
-  JupyterFrontEndPlugin
+  JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
 
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
@@ -14,7 +14,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-codex:plugin',
   autoStart: true,
   optional: [ISettingRegistry],
-  activate: (app: JupyterFrontEnd, settingRegistry: ISettingRegistry | null) => {
+  activate: (
+    app: JupyterFrontEnd,
+    settingRegistry: ISettingRegistry | null,
+  ) => {
     console.log('JupyterLab extension jupyterlab-codex is activated!');
 
     if (settingRegistry) {
@@ -24,7 +27,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
           console.log('jupyterlab-codex settings loaded:', settings.composite);
         })
         .catch(reason => {
-          console.error('Failed to load settings for jupyterlab-codex.', reason);
+          console.error(
+            'Failed to load settings for jupyterlab-codex.',
+            reason,
+          );
         });
     }
 
@@ -34,10 +40,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
       })
       .catch(reason => {
         console.error(
-          `The jupyterlab_codex server extension appears to be missing.\n${reason}`
+          `The jupyterlab_codex server extension appears to be missing.\n${reason}`,
         );
       });
-  }
+  },
 };
 
 export default plugin;

@@ -11,14 +11,14 @@ import { ServerConnection } from '@jupyterlab/services';
  */
 export async function requestAPI<T>(
   endPoint = '',
-  init: RequestInit = {}
+  init: RequestInit = {},
 ): Promise<T> {
   // Make request to Jupyter API
   const settings = ServerConnection.makeSettings();
   const requestUrl = URLExt.join(
     settings.baseUrl,
     'jupyterlab-codex', // API Namespace
-    endPoint
+    endPoint,
   );
 
   let response: Response;
