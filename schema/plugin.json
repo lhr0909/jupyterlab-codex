@@ -3,6 +3,39 @@
   "title": "jupyterlab-codex",
   "description": "jupyterlab-codex settings.",
   "type": "object",
-  "properties": {},
+  "jupyter.lab.setting-icon": "fa-cogs",
+  "jupyter.lab.setting-icon-label": "Codex",
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "title": "OpenAI API key",
+      "description": "OpenAI API key for using Codex",
+      "default": ""
+    },
+    "engine": {
+      "type": "string",
+      "title": "OpenAI Engine",
+      "description": "Choose the engine used with the plugin",
+      "default": "davinci-codex"
+    },
+    "max_tokens": {
+      "type": "number",
+      "title": "Max Tokens",
+      "description": "Maximum # of tokens to return",
+      "default": 256
+    },
+    "temperature": {
+      "type": "number",
+      "title": "Temperature",
+      "description": "Temperature setting for the completion",
+      "default": 0.5
+    },
+    "stop": {
+      "type": "array",
+      "title": "Stop Sequence",
+      "description": "Stop Sequence setting for the completion",
+      "default": ["####"]
+    }
+  },
   "additionalProperties": false
 }

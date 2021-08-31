@@ -34,7 +34,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         });
     }
 
-    requestAPI<any>('get_example')
+    requestAPI<any>('completion')
       .then(data => {
         console.log(data);
       })

@@ -84,6 +84,8 @@ try:
     )
     setup_args["cmdclass"] = wrap_installers(post_develop=post_develop, ensured_targets=ensured_targets)
     setup_args["data_files"] = get_data_files(data_files_spec)
+
+    setup_args["install_requires"] = ["openai"]
 except ImportError as e:
     import logging
     logging.basicConfig(format="%(levelname)s: %(message)s")

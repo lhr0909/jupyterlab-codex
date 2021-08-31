@@ -15,6 +15,7 @@ twine = "^3.4.2"
 
 # [build-system]
 # requires = ["poetry>=0.12"]
+jupyter-packaging = "^0.10.4"
 # build-backend = "poetry.masonry.api"
 
 [tool.jupyter-packaging.options]
