@@ -25,23 +25,13 @@ To remove the extension, execute:
 pip uninstall jupyterlab-codex
 ```
 
+## How to Use
 
-## Troubleshoot
+After installing, you can find the extension settings in `Settings -> Advanced Settings Editor` and you can add your API keys and adjust the completion settings there.
 
-If you are seeing the frontend extension, but it is not working, check
-that the server extension is enabled:
+You will find a hexagon icon on the toolbar of a notebook. Once you click with an active code cell, it will send the content of the cell to the Codex Model and set up the completion.
 
-```bash
-jupyter server extension list
-```
-
-If the server extension is installed and enabled, but you are not seeing
-the frontend extension, check the frontend extension is installed:
-
-```bash
-jupyter labextension list
-```
-
+You can also send more than one cell by selecting the code cells and clicking the toolbar button. The completion will be added to the last selected code cell.
 
 ## Contributing
 
