@@ -3,7 +3,9 @@ import { NotebookPanel, INotebookModel } from '@jupyterlab/notebook';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 import { DocumentRegistry } from '@jupyterlab/docregistry';
 import { ToolbarButton } from '@jupyterlab/apputils';
+import { LabIcon } from '@jupyterlab/ui-components';
 
+import { CODEX_ICON } from './icon';
 import {
   generateCodeInCell,
   getCodeCells,
@@ -32,7 +34,10 @@ export class CodexButtonExtension
   ): void | IDisposable {
     const button = new ToolbarButton({
       tooltip: 'Codex It!',
-      iconClass: 'fa fa-cogs',
+      icon: new LabIcon({
+        name: 'codex',
+        svgstr: CODEX_ICON,
+      }),
       onClick: async () => {
         const codeCells = getCodeCells(widget.content);
         const prompt = getCodeCellTextAsPrompt(codeCells);
