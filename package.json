@@ -47,10 +47,11 @@
   },
   "dependencies": {
     "@jupyterlab/application": "^3.1.0",
-    "@jupyterlab/settingregistry": "^3.1.0",
+    "@jupyterlab/cells": "^3.1.8",
     "@jupyterlab/coreutils": "^5.1.0",
-    "@jupyterlab/services": "^6.1.0"
-
+    "@jupyterlab/notebook": "^3.1.8",
+    "@jupyterlab/services": "^6.1.0",
+    "@jupyterlab/settingregistry": "^3.1.0"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.1.0",
@@ -58,8 +59,8 @@
     "@typescript-eslint/parser": "^4.8.1",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-prettier": "^3.1.4", 
-    "mkdirp": "^1.0.3", 
+    "eslint-plugin-prettier": "^3.1.4",
+    "mkdirp": "^1.0.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
@@ -70,17 +71,17 @@
     "style/index.js"
   ],
   "styleModule": "style/index.js",
-  "jupyterlab": { 
+  "jupyterlab": {
     "discovery": {
-        "server": {
-          "managers": [
-            "pip"
-          ],
-          "base": {
-            "name": "jupyterlab_codex"
-          }
+      "server": {
+        "managers": [
+          "pip"
+        ],
+        "base": {
+          "name": "jupyterlab_codex"
         }
-    }, 
+      }
+    },
     "extension": true,
     "outputDir": "jupyterlab_codex/labextension",
     "schemaDir": "schema"
