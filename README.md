@@ -4,12 +4,7 @@
 
 JupyterLab extension that unlocks the power of OpenAI's Codex Model.
 
-
-This extension is composed of a Python package named `jupyterlab_codex`
-for the server extension and a NPM package named `jupyterlab-codex`
-for the frontend extension.
-
-
+This extension is pre-built extension available on [PyPI](https://pypi.org/project/jupyterlab-codex/) named `jupyterlab-codex`
 ## Requirements
 
 * JupyterLab >= 3.0
@@ -19,7 +14,7 @@ for the frontend extension.
 To install the extension, execute:
 
 ```bash
-pip install jupyterlab_codex
+pip install jupyterlab-codex
 ```
 
 ## Uninstall
@@ -27,7 +22,7 @@ pip install jupyterlab_codex
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyterlab_codex
+pip uninstall jupyterlab-codex
 ```
 
 
