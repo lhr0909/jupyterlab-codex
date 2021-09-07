@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-codex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JupyterLab extension that unlocks the power of OpenAI's Codex Model.",
   "keywords": [
     "jupyter",
