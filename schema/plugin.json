@@ -34,7 +34,13 @@
       "type": "array",
       "title": "Stop Sequence",
       "description": "Stop Sequence setting for the completion",
-      "default": ["####"]
+      "default": ["#"]
+    },
+    "displayLineTimeout": {
+      "type": "number",
+      "title": "Display Line Timeout",
+      "description": "Timeout between displaying each line of code Codex generates",
+      "default": 250
     }
   },
   "additionalProperties": false

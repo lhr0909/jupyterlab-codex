@@ -8,6 +8,7 @@ export interface ICodexConfig {
   engine: string;
   max_tokens: number;
   temperature: number;
+  displayLineTimeout: number;
   stop: string[];
 }
 
@@ -50,7 +51,15 @@ export async function generateCodeInCell(
     console.log(data);
 
     if (data.choices && data.choices.length > 0) {
-      codeCell.model.value.text += data.choices[0].text;
+      const texts = data.choices[0].text.split('\n');
+      for (const text of texts) {
+        codeCell.model.value.text += text;
+        codeCell.model.value.text += '\n';
+        // sleep displayLineTimeout ms
+        await new Promise(resolve =>
+          setTimeout(resolve, config.displayLineTimeout),
+        );
+      }
     }
   } catch (error) {
     console.error(
